@@ -1,0 +1,163 @@
+table {
+  width: 100%;  
+}
+// .filter
+// {
+//   width: 500px;
+
+// }
+.button-align{
+  width: 10%;
+  text-align: center;
+  top: 30%;
+}
+.mat-icon-button{
+  text-align: center;
+  color: #1e293b;
+}
+.button-container{
+height:100%;
+padding: 1% 1%;
+display:flex;
+}
+.filter{
+  width: fit-content;
+  border-radius: 30px;
+  // margin-top: 10%;
+  
+}
+.add-device{
+  width: 100%;
+  padding-bottom: 2%;
+  margin-left: 10px;
+  
+  
+}
+.add-button-align{
+  margin-top: 1.00%;
+  margin-left: 1%;
+  width: 13%;
+  position: relative;
+  text-align: center;
+  top: 30%;
+  padding: -1%;
+  border-color: #070707;
+  color: black;
+   border-radius:20px;
+}
+.add-button-align:hover {
+  background-color: #55acee;
+  color:rgb(119, 255, 0);
+  border-color: #070707;
+  
+  
+}
+// .add-button-align span {
+//   margin-left: 5px; /* Adjust the spacing between icon and text */
+// }
+.add-button{
+  color: black;
+  border-color: #141313;
+}
+.add-button:hover{
+  color: white;
+}
+
+
+.selectTab
+{
+  width: 100%;
+  height:100%;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 2%;
+  margin-top: 20px;
+  
+}
+.device-select
+{
+  width: 15%;
+  margin-top: 20px;
+  margin-left: 60%;
+  
+}
+.sensor-select
+{
+  margin-left: 05%;
+  width: 20%;
+  
+}
+.view-button{
+  width: 50%;
+}
+.table
+{
+  align-items: center;
+  padding-top: 10%;
+  padding-left: 25%;
+}
+.user-paginator
+{
+  width: 100%;
+  
+}
+.mat-column-select {
+  overflow: initial;
+}
+// .add-device{
+//   margin-top: 50px;
+// }
+.header-container {
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.device-select {
+  width: 290px;
+  //margin-top: 10px;
+  margin-left: -150px;
+  align-items: center;
+  // padding-left: 50px; /* Adjust the margin as needed */
+}
+.add-device button {
+  width: 175px;
+  height: 50px;
+  margin-top: 10px;
+  border: 1px solid #070707;
+  border-radius: 10px;
+  // background-color: #fff;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.page{
+  align-items: center;
+  color:white;
+  padding: 0 1rem;
+  background: white;
+  &__box{
+    min-height: 120px;
+    background: #1e293b;
+    margin: 0 -1rem;
+    font-size: 36px;
+
+  }
+  &__content{
+      min-height: calc(100vh - 178px);
+      border-radius: 10px;
+      margin-top: -2rem;
+      background: white;
+      color: black;
+      font-size: 2rem;
+      &__data{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+  }
+}
+

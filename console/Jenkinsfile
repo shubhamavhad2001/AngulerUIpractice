@@ -1,0 +1,34 @@
+pipeline
+{
+  agent { label 'docker.web.ksemin.in' }
+  stages
+  {
+    // stage('SonarQube Analysis') {
+    //     steps {
+    //       sh '''
+    //       sonar-scanner \
+    //         -Dsonar.projectKey=Nbot-UI \
+    //         -Dsonar.sources=. \
+    //         -Dsonar.host.url=https://quality.web.ksemin.in \
+    //         -Dsonar.token=sqp_72f425b093c2ecb7e33d84681c6f6e13838289cf
+    //       '''
+    //     }
+    // }
+  
+    stage('Deployment Stage')
+    {
+      steps
+      {
+        sh "cd ./front-end/nbot-server-ui/ && docker build -t pranavksemin/sensormanagement:console-latest ."
+        withDockerRegistry([ credentialsId: "dockerId-1", url: ""])
+        {
+          sh "docker push pranavksemin/sensormanagement:console-latest"
+          sh "ssh ksemin@web.ksemin.in microk8s kubectl delete deployments/console -n nbot"
+          sh "scp ./front-end/nbot-server-ui/console-nbot.yaml ksemin@web.ksemin.in:~/deployments"
+          sh "ssh ksemin@web.ksemin.in microk8s kubectl apply -f ~/deployments/console-nbot.yaml"
+          //sh "kubectl apply -f users-nbot.yaml"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+<div class="container-fluid page">
+    <div class="mat-elevation-z8">
+        <div class="button-container">
+
+        </div>
+        <div class="selectTab">
+            <button mat-menu-item class="refresh-class" (click)="updateSensor()">
+                <mat-icon>refresh</mat-icon>
+             </button> 
+            <button class="selectTime" (click)="timeStamp(5)">5 M</button>
+            <button class="selectTime1" (click)="timeStamp(60)">1  H</button>
+            <!-- <button class="selectTime1" (click)="timeStamp(360)">6 H</button> -->
+            <button class="selectTime1" (click)="timeStamp(720)">12 H</button>
+            <button class="selectTime1" (click)="timeStamp(1440)">24 H</button>
+            <!-- <mat-form-field class="form-field">
+                <input matInput [matDatepicker]="startDatePicker" placeholder="Start Date" [(ngModel)]="startDate">
+                <mat-datepicker-toggle matSuffix [for]="startDatePicker"></mat-datepicker-toggle>
+                <mat-datepicker #startDatePicker></mat-datepicker>
+              </mat-form-field>
+            
+              <mat-form-field class="form-field">
+                <input matInput [matDatepicker]="endDatePicker" placeholder="End Date" [(ngModel)]="endDate">
+                <mat-datepicker-toggle matSuffix [for]="endDatePicker"></mat-datepicker-toggle>
+                <mat-datepicker #endDatePicker></mat-datepicker>
+              </mat-form-field>
+            
+              <button (click)="printDateRange()">Show Data</button> -->
+              
+            <!-- <mat-form-field class="dateRange" [(ngModel)]="selectDate" >
+                <mat-label>Enter a date range</mat-label>
+                <mat-date-range-input [rangePicker]="picker">
+                  <input matStartDate placeholder="Start date" style="color: black;">
+                  <input matEndDate placeholder="End date" style="color: black;">
+                </mat-date-range-input>
+                <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-date-range-picker #picker></mat-date-range-picker>
+              </mat-form-field> -->
+            <!-- <mat-form-field class="device-select">
+                <mat-label>
+                    Devices
+                </mat-label>
+                <mat-select [(ngModel)]="deviceSelected" (ngModelChange)="LoadSensors($event)">
+                    <mat-option [value]="">
+                        Select a Device
+                    </mat-option>
+                    <mat-option *ngFor="let device of deviceList" [value]="device.id">
+                        {{device.id}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field> -->
+            <!-- <mat-form-field class="sensor-select">
+                <mat-label>
+                    Sensors
+                </mat-label>
+                <mat-select [(ngModel)]="sensorSelected" (ngModelChange)="LoadCurrentSensors($event)">
+                    <mat-option [value]="">
+                        Select a Sensor
+                    </mat-option>
+                    <mat-option *ngFor="let sensor of sensorList" [value]="sensor.sensorId">
+                        {{sensor.sensorName}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field> -->
+            <mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
+            <div id="chart_div" style="height:600px; margin-left: 5%;"></div>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"
+    integrity="sha512-UXumZrZNiOwnTcZSHLOfcTs0aos2MzBWHXOHOuB0J/R44QB0dwY5JgfbvljXcklVf65Gc4El6RjZ+lnwd2az2g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-zoom/2.0.0/chartjs-plugin-zoom.min.js"
+    integrity="sha512-B6F98QATBNaDHSE7uANGo5h0mU6fhKCUD+SPAY7KZDxE8QgZw9rewDtNiu3mbbutYDWOKT3SPYD8qDBpG2QnEg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>

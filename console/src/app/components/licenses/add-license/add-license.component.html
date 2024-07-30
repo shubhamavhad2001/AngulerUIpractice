@@ -1,0 +1,42 @@
+<mat-card>
+    <mat-card-header>
+        <h1 style="align-items:center">Add License</h1>
+    </mat-card-header>
+    <mat-card-content>
+        <form class="example-form" [formGroup]="registerLcsForm" (ngSubmit)="AddLicense()" >
+
+        <mat-form-field  class="example-full-width">
+            <mat-label>Organization</mat-label>
+            <mat-select formControlName="orgId" (ngModelChange)="LoadUsers($event)" (ngModelChange)="LoadOrgs()">
+                <mat-option [value]="">Select Organization</mat-option>
+                <mat-option *ngFor="let item of orgList" [value]="item.orgId"> 
+                  {{item.orgName}}
+                </mat-option>
+              </mat-select>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Users</mat-label>
+            <mat-select formControlName="userId">
+                <mat-option [value]="">Select User</mat-option>
+                <mat-option *ngFor="let item of usrList" [value]="item.id"> 
+                  {{item.name}}
+                </mat-option>
+              </mat-select>
+          </mat-form-field>
+          <div>
+            <input id="expiryTime" formControlName="expiryTime" type="datetime-local" class="example-form" />
+            <mat-checkbox formControlName="licenseStatus" class="date-field">Is Active!</mat-checkbox>
+          </div>
+        <div >
+            <button class="update-button" mat-menu-item><mat-icon>fingerprint</mat-icon> Add</button> 
+            <a class="update-button" mat-dialog-close mat-menu-item><mat-icon>exit_to_app</mat-icon> Close</a>
+        </div>
+        
+      </form>
+      
+
+    </mat-card-content>
+  </mat-card>
+  
+
+

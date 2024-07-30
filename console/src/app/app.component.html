@@ -1,0 +1,22 @@
+<mat-drawer-container>  
+    <mat-drawer mode="side" [opened]="sideBarOpen">
+        <app-sidenav>
+        </app-sidenav>
+    </mat-drawer>
+    <mat-drawer-content>
+        <app-header (toggleSidebarForMe)="sideBarToggler()" *ngIf="ismenurequired">
+            
+        </app-header>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>
+<div class="copyright-area" >
+    <div class="container">
+        
+            <div class="col-xl-12 col-lg-12 col-md-6">
+                <div class="copyright-text">
+                    <p>Copyright &copy; 2014, All Right Reserved <a target="_blank" href="https://ksemin.in">kSemin Systems.Pvt.Ltd</a></p>
+                </div>
+            </div>
+        </div>
+    </div>

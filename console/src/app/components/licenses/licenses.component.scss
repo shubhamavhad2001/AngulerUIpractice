@@ -1,0 +1,55 @@
+.page{
+    color:white;
+    padding: 0 1rem;
+    background: white;
+    &__box{
+        min-height: 120px;
+        background: #1e293b;
+        margin: 0 -1rem;
+        font-size: 36px;
+
+    }
+    &__content{
+        min-height: calc(100vh - 178px);
+        border-radius: 10px;
+        margin-top: -2rem;
+        background: white;
+        color: black;
+        font-size: 2rem;
+        &__data{
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+.org-select{
+    padding: 1%;
+}
+
+.button-container{
+    height:100%;
+    padding-bottom: 1%;
+    margin-left: 14%;
+ }
+.add-button-align{
+      margin-top: -5.4%;
+      margin-left: 15%;
+      width: 14%;
+      position: relative;
+      text-align: center;
+}
+.add-button-align:hover{
+    background:  #ff5a60;
+    border-radius:10px;
+    width: fit-content;
+    
+    
+}
+.add-button-align-span:hover{
+    color:white
+}
+// .selectTab{
+//     display: flex;
+// }

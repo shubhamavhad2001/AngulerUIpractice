@@ -1,0 +1,27 @@
+@import "./components/home/home.component.scss";
+
+
+:host{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+mat-drawer{
+    width: 260px;
+    background:white;
+}
+mat-drawer-container{
+    height: 100%;
+
+}
+#sidenav.menu-open{
+    width: 250px;
+
+}
+#sidenav.menu-close{
+    width: 80px;
+}
+.copyright-area{
+   background:  #33383c;
+}

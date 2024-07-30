@@ -1,0 +1,40 @@
+<mat-card class="device-form">
+  <mat-card-header>
+    <h1 style="align-items:center">Add Device</h1>
+  </mat-card-header>
+  <mat-card-content>
+    <form class="example-form" [formGroup]="registerDeviceForm" (ngSubmit)="AddDevice()">
+      <div >
+        <mat-form-field appearance="fill">
+          <mat-label>Device  Name</mat-label>
+          <input matInput formControlName="sensorName">
+          <mat-icon matSuffix>sensors</mat-icon>
+          <mat-hint>Enter name as your convinience</mat-hint>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field  appearance="fill">
+          <mat-label>Select Sensor</mat-label>
+          
+          <mat-select formControlName="sensorType" multiple>
+            <mat-option *ngFor="let obj of values" [value]="obj.sensorTypeId">{{obj.sensorType}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field  appearance="fill">
+          <mat-label>Select License</mat-label>
+          <mat-select formControlName="license">
+            <mat-option *ngFor="let data of license" [value]="data.licenseId">{{data.expiryTime | date}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-checkbox formControlName="Health" class="example-margin">Is Active!</mat-checkbox>
+        <button class="device-button" type="submit" mat-menu-item><mat-icon>add</mat-icon> Add Device</button>
+        <a class="device-button" mat-dialog-close mat-menu-item><mat-icon>exit_to_app</mat-icon> Close</a>
+      </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+  <html></html>

@@ -1,0 +1,58 @@
+.mat-toolbar
+{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: linear-gradient(90deg, rgb(163, 215, 250) 51%, rgb(80, 184, 254) 100%);
+}
+
+ul{
+    li{
+        list-style: none;
+    }
+
+}
+
+button{
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+
+.user
+{
+    font-size: 14px;
+    
+
+}
+
+.user-image
+{
+    border-radius: 50%;
+    width:50px;
+    height:50px;
+}
+
+.user-image-icon{
+    height: 18px;
+    font-size: 16px;
+}
+
+.mat-menu-content{
+    width: 160px;
+}
+.item{
+    // margin-right: 70%;
+    padding-top: 7px;
+    font-family:Roboto, "Helvetica Neue", sans-serif;
+    font-weight:500;
+    font-size: 2rem;
+}
+.icon-hover:hover{
+    background: linear-gradient(90deg, rgb(163, 215, 250) 51%, rgb(80, 184, 254) 100%);
+    border-radius: 50px;
+    margin-top: 5px;
+    padding-bottom: auto;
+    box-shadow: 0 0 10px 0 rgb(163, 215, 250) inset, 0 0 20px 2px rgb(80, 184, 254);
+//   border: 1px solid #050606;
+}

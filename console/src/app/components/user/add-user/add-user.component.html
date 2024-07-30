@@ -1,0 +1,63 @@
+<mat-card class="user-from">
+    <mat-card-header>
+        <h1 style="align-items:center">Add User</h1>
+    </mat-card-header>
+    <mat-card-content>
+        <form class="example-form" [formGroup]="registerUserForm" (ngSubmit)="addUser()">
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label>Name</mat-label>
+                    <input matInput formControlName="name">
+                    <mat-icon matSuffix>account_box</mat-icon>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field>
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="username">
+                    <mat-icon matSuffix>alternate_email</mat-icon>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field>
+                <mat-label>Password</mat-label>
+                    <input matInput formControlName="password" type="password">
+                </mat-form-field>
+             </div>
+            <div>
+                <mat-form-field>
+                <mat-label>Confirm Password</mat-label>
+                    <input matInput formControlName="confirm_password" (change)="matchPassword()" type="password">
+                </mat-form-field>
+            </div>
+            <div *ngIf="userRole === '1'">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Organization</mat-label>
+                    <mat-select formControlName="orgId">
+                        <mat-option [value]="">Select Organization</mat-option>
+                        <mat-option *ngFor="let Data of orgsList" [value]="Data.orgId">
+                            {{Data.orgName}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Role</mat-label>
+                    <mat-select formControlName="usrRole">
+                        <mat-option [value]="">Select Role</mat-option>
+                        <mat-option *ngFor="let item of rolelist" [value]="item.userRoleId">
+                            {{item.userRole}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            
+            <div>
+                <mat-checkbox formControlName="Status" class="example-margin">Is Active</mat-checkbox>
+                <button class="device-button" type="submit" (click)="addUser()" mat-menu-item><mat-icon>add</mat-icon> Add User</button>
+                <a class="user-button" mat-dialog-close mat-menu-item><mat-icon>exit_to_app</mat-icon> Close</a>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>

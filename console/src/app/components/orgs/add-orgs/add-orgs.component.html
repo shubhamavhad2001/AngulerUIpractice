@@ -1,0 +1,26 @@
+<mat-card class="device-form">
+    <mat-card-header>
+      <h1 style="align-items:center">Add Device</h1>
+    </mat-card-header>
+    <mat-card-content>
+      <form class="example-form" [formGroup]="registerOrgForm" (ngSubmit)="AddOrgs()">
+        <div>
+          <mat-form-field appearance="fill">
+            <mat-label>Organization Name</mat-label>
+            <input matInput formControlName="orgName" placeholder="Enter Org Name">
+            <mat-icon matSuffix>work_outline</mat-icon>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-checkbox formControlName="orgStatus" class="example-margin">Is Active!</mat-checkbox>
+        </div>
+        <div>
+          <button class="device-button" mat-menu-item><mat-icon>add</mat-icon> Add...</button>
+          <a class="device-button" mat-dialog-close mat-menu-item><mat-icon>exit_to_app</mat-icon> Close</a>
+        </div>
+  
+      </form>
+  
+  
+    </mat-card-content>
+  </mat-card>

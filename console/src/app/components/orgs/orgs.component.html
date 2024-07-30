@@ -1,0 +1,56 @@
+<div class="container-fluid page">
+    
+  
+        <mat-form-field class="filter">
+            <mat-label>Filter</mat-label>
+            <input matInput (keyup)="applyFilter($event)" placeholder="example: email@gmail.com" #input>
+          </mat-form-field>
+          <div class="button-container">
+             <button mat-menu-item mat-raised-button class="add-button-align" (click)="AddOrgs()">
+                <mat-icon class="mat-icon-button">add</mat-icon><span class="add-button-align-span"> Add Organization</span>
+            </button> 
+        </div>
+        <table mat-table matSort [dataSource]="dataSource">
+
+            <ng-container matColumnDef="orgId">
+                <th mat-header-cell mat-sort-header *matHeaderCellDef> Organization Id </th>
+                <td mat-cell *matCellDef="let element"> {{element.orgId}} </td>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="orgName">
+                <th mat-header-cell mat-sort-header *matHeaderCellDef> Organization Title</th>
+                <td mat-cell *matCellDef="let element"> {{element.orgName}} </td>
+            </ng-container>
+
+            <!-- Weight Column -->
+            <ng-container matColumnDef="creationTime">
+                <th mat-header-cell mat-sort-header *matHeaderCellDef> Created At </th>
+                <td mat-cell *matCellDef="let element"> {{element.creationTime | date}} </td>
+            </ng-container>
+            <!-- Status Column -->
+            <ng-container matColumnDef="orgStatus">
+                <th mat-header-cell mat-sort-header *matHeaderCellDef> Organization Status </th>
+                <td mat-cell *matCellDef="let element"> {{ element.orgStatus?'Active':'In Active' }} </td>
+            </ng-container>
+            <ng-container matColumnDef="Actions">
+                <th mat-header-cell mat-sort-header *matHeaderCellDef> Actions </th>
+                <td mat-cell *matCellDef="let element">
+                    <mat-select placeholder="Actions to perform">
+                        <mat-option (click)="updateOrgs(element.orgId)">
+                            Update
+                        </mat-option>
+                        <mat-option (click)="deleteOrgs(element.orgId)">
+                            Delete
+                        </mat-option>
+                    </mat-select>
+                </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let element; columns: displayedColumns;"></tr>
+        </table>
+        <mat-paginator class="user-paginator" [pageSizeOptions]="[10, 20, 50, 100]" showFirstLastButtons
+            aria-label="Select page of periodic elements">
+        </mat-paginator>
+   
+</div>

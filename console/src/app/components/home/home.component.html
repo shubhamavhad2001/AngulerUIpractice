@@ -1,0 +1,438 @@
+<section class="banner-container">
+    <img class="image-container" src="../../../assets/images/home.jpg" alt="Home-1" />
+    <div class="banner-text">
+        <h1 class="banner-text-h1">SENSOR MANAGEMENT <br> SYSTEM</h1>
+        <button type="button" (click)="InfoPopup()" class="button1"><span>Request Demo</span> </button>
+    </div>
+</section>
+<!-- <hr style="border-color: rgb(174, 173, 167); border: 0.5em;align-items: center;"> -->
+<section class="benifit-container">
+    <h2 class="benifit-h2">BENEFITS OF OUR SYSTEM</h2>
+    <div class="benifit-parent">
+        <div class="benifit-div1">
+            <h3 class="subdiv1-h3">Manufacturing</h3>
+            <img class="subdiv1-img" src="../../../assets/images/manufacturing.png" alt="manufacturing.png">
+            <p class="subdiv1-p">Sensors are used to monitor environmental conditions such as temperature, humidity, and
+                air quality process allows you to improve product quality, increase efficiency, and reduce costs.
+            </p>
+        </div>
+        <div class="benifit-div2">
+            <h3 class="subdiv1-h3">Power Sector</h3>
+            <img class="subdiv2-img" src="../../../assets/images/Smart_Power.png" alt="Smart_power">
+            <p class="subdiv2-p">Sensors are used in power generation units for temperature monitoring, pressure
+                monitoring, vibration monitoring and emissions monitoring ,water quality and
+                transformer monitoring.
+            </p>
+
+        </div>
+        <div class="benifit-div3">
+            <h3 class="subdiv1-h3">Agriculture</h3>
+            <img class="subdiv3-img" src="../../../assets/images/Smart-Argiculture.png" alt="Smart_power">
+            <p class="subdiv2-p">Sensors are used in agriculture for soil monitoring, weather monitoring, crop
+                monitoring, livestock monitoring, soil moisture monitoring and equipment monitoring.
+            </p>
+
+
+        </div>
+    </div>
+
+</section>
+<section class="use-container">
+    <div class="use-div">
+        <h1 class="use-h1">WHO CAN USE OUR SYSTEM</h1>
+        <p class="use-p">Everybody who needs to collect, process, and analyze large amounts of data
+            from sensors can benefit from using a sensor management system.</p>
+    </div>
+</section>
+<section class="info-container">
+
+    <div class="info-parent">
+        <div class="info-div1">
+            <img class="info-div1-img" src="../../../assets/images/Manufacturing_unit.png" alt="Manufacturing">
+        </div>
+        <div class="info-div2">
+            <h1 class="info-h1">For Manufacturing</h1>
+            <p class="info-div2-p">
+
+                A sensor management system in a manufacturing unit integrates various sensors to monitor the performance
+                and efficiency of machines and processes.
+                It provides real-time data that enables manufacturers to optimize production, reduce downtime, and
+                improve quality control.
+                Key benefits of a sensor management system in a manufacturing unit include process optimization,
+                predictive maintenance, quality control, safety,
+                and energy efficiency. A sensor management system helps manufacturers to improve their processes, reduce
+                costs, and ensure consistent quality.
+            </p>
+        </div>
+    </div>
+
+</section>
+<section class="info1-container">
+    <div class="info1-parent">
+        <div class="info1-div1">
+            <h1 class="info1-h1">For Power Sector</h1>
+            <p class="info1-div1-p">
+                A sensor management system in the power sector integrates various sensors to monitor and optimize the
+                performance of power generation, transmission, and distribution equipment.
+                It provides real-time data that helps power plant operators improve efficiency, reduce downtime, and
+                enhance safety and environmental compliance.
+                Key benefits of a sensor management system in the power sector include equipment performance
+                optimization, predictive maintenance, emissions monitoring, grid management, and safety.
+                A sensor management system helps power plant operators to optimize performance, reduce downtime, and
+                improve safety and environmental compliance.
+            </p>
+        </div>
+        <div class="info1-div2">
+            <img class="info1-div2-img" src="../../../assets/images/power_sector.png" alt="Power_sector">
+        </div>
+    </div>
+</section>
+<section class="info2-container">
+    <div class="info2-parent">
+        <div class="info2-div1">
+            <img class="info2-div1-img" src="../../../assets/images/agriculture.png" alt="Agriculture">
+        </div>
+        <div class="info2-div2">
+            <h1 class="info2-div2-h1">For Agriculture</h1>
+            <p class="info2-div2-p">
+                A sensor management system in agriculture involves the use of various sensors to monitor and optimize
+                crop growth and management. It provides real-time data that helps farmers
+                make data-driven decisions about irrigation, fertilization, and pest control.
+                Key benefits of a sensor management system in agriculture include increased crop yields, reduced waste,
+                and improved sustainability. Sensors can be used to monitor soil moisture, temperature, and nutrient
+                levels, as well as weather conditions and crop growth.
+                By analyzing this data, farmers can optimize their farming practices and reduce the use of resources
+                such as water and fertilizer.
+        </div>
+    </div>
+
+</section>
+<section class="report-container">
+    <div class="report-parent">
+        <h1 class="report-h1">SENSOR ANALYSIS AND MANAGEMENT SYSTEM</h1>
+        <p class="report-p">Organizations can optimize their operations and reduce costs by proactively 
+            identifying and addressing potential issues before they become major problems</p>
+            <ul style="list-style-type: circle" class="report-ul">
+                 <li>Prediction using AI & MI </li> 
+                <li>Alert System </li> 
+            </ul>
+
+
+        </div>
+
+</section>
+<section class="talk-container">
+
+    <img class="talk-img" src="../../../assets/images/contact.png" alt="">
+    <div class="sub-container">
+        <div class="row">
+            <h1 class="container-h1">CONTACT US</h1>
+        </div>
+        <div class="row">
+            <h4 style="text-align:center">We'd love to hear from you!</h4>
+        </div>
+        <form [formGroup]="updateform" (ngSubmit)="sendMail()">
+            <div class="row input-container">
+
+                <div class="col-xs-12">
+
+                    <div class="styled-input wide">
+
+                        <input type="text" formControlName="name" placeholder="Name" required />
+                        <!-- <label>Name</label> -->
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="styled-input">
+                        <input type="email" formControlName="email" placeholder="Email" required />
+                        <!-- <label>Email</label> -->
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="styled-input" style="float:right;">
+                        <input type="text" formControlName="phone" placeholder="Phone Number" required />
+                        <!-- <label>Phone Number</label> -->
+                    </div>
+                </div>
+                
+                <div class="col-xs-12">
+                    <div class="styled-input wide">
+                        <textarea required formControlName="message" placeholder="Message"></textarea>
+                        <!-- <label>Message</label> -->
+                    </div>
+                </div>
+                <div class="col-xs-8">
+                    <button class="btn-lrg submit-btn" type="submit">Send Message</button>
+
+                </div>
+
+            </div>
+        </form>
+    </div>
+</section>
+<footer class="section bg-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="">
+                    <h6 class="footer-heading text-uppercase text-white">Ouick Links</h6>
+                    <ul class="list-unstyled footer-link mt-4">
+                        <li><a href="https://sites.google.com/ksemin.in/ksemin/about-us?authuser=0"
+                            target="_blank">About us</a></li>
+                        <li><a href="https://sites.google.com/ksemin.in/ksemin/careers" target="_blank">Career</a></li>
+                        <li><a href="https://sites.google.com/ksemin.in/ksemin/contact-us" target="_blank">Contact Us</a></li>
+                        <li><a href="https://sites.google.com/ksemin.in/ksemin/services" target="_blank">Services</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="">
+                    <h6 class="footer-heading text-uppercase text-white">Our Services</h6>
+                    <ul class="list-unstyled footer-link mt-4">
+                        <li><h5 class="footer-h5">Web Development </h5></li>
+                        <li><h5 class="footer-h5">Cloud Services</h5></li>
+                        <li><h5 class="footer-h5">Cloud Consultancy</h5></li>
+                        <li><h5 class="footer-h5">Application Modernization</h5></li>
+                        <li><h5 class="footer-h5">Data Modernization</h5></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-2">
+                <div class="">
+                    <h6 class="footer-heading text-uppercase text-white">Our Product</h6>
+                    <ul class="list-unstyled footer-link mt-4">
+                        <li><h5 class="footer1-h5">N-Bot Platform</h5></li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="">
+                    <h6 class="footer-heading text-uppercase text-white">Contact Us</h6>
+                    <p class="contact-info mt-4">Contact us if need help withanything</p>
+                    <p class="contact-info">+(91)020-27401273</p>
+                     <p class="contact-info">Sales@ksemin.in</p>
+                     <p class="contact-info">Address-(Sai Ganga Apartment,Sant Nager,Sectore No.04,Jai Ganesh Samrajya
+                        Squre,Moshi Pradhikaran,PCMC,Pune-411070)</p>
+                    <!-- <div class="mt-5">
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><a href="#"><i class="fab facebook footer-social-icon fa-facebook-f"></i></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fab twitter footer-social-icon fa-twitter"></i></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fab google footer-social-icon fa-google"></i></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fab apple footer-social-icon fa-apple"></i></i></a></li>
+                        </ul>
+                    </div> -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- <div class="text-center mt-5">
+        <p class="footer-alt mb-0 f-14">2019 © Anup, All Rights Reserved</p>
+    </div> -->
+</footer>
+
+<!-- <section class="footer-container">
+    <div class="footer-parent">
+    
+    <div class="footer-div1">
+        <h4 class="footer-h4">Quick links</h4>
+        <hr class="footer-hr">
+        <a class="footer-link" href="https://sites.google.com/ksemin.in/ksemin/about-us?authuser=0" target="_blank">About Us</a>
+        <a class="footer-link" href="https://sites.google.com/ksemin.in/ksemin/about-us?authuser=0" target="_blank">Career</a>
+        <a class="footer-link" href="https://sites.google.com/ksemin.in/ksemin/about-us?authuser=0" target="_blank">Contact Us</a>
+        <a class="footer-link" href="https://sites.google.com/ksemin.in/ksemin/about-us?authuser=0" target="_blank">Privacy Policy</a>
+
+    </div>
+    <div class="footer-div2">
+        <h4 class="footer-h4">Our Services</h4>
+         <hr class="footer-hr">
+         <h3 class="footer-h3">Web Development</h3>
+         <h3 class="footer-h3">App Development</h3>
+         <h3 class="footer-h3">Cloud Services</h3>
+         <h3 class="footer-h3">Cloud Consultancy</h3>
+         <h3 class="footer-h3">Data Modernization</h3>
+         <h3 class="footer-h3">Application Modernization</h3>
+    </div>
+    <div class="footer-div3">
+        <h4 class="footer-h4">Our Product</h4>
+        <hr class="footer-hr">
+        <h3 class="footer3-h3">NBot Sensor Management Platform</h3>
+    </div>
+    <div class="footer-div4">
+        <h4 class="footer4-h4">Contact Info</h4>
+        <hr class="footer4-hr">
+        <span class="footer-icon"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon><span class="footer-add"> Ganga Apartment,Sant Nager,Sectore <span class="footer-add1"> No.04,Jai Ganesh Samrajya
+            Squre,Moshi</span><span class="footer-add2"> Pradhikaran,PCMC,Pune-411070</span></span></span>
+        <span class="footer-icon"><mat-icon> call</mat-icon><span class="footer-call">+(91)020-27401273</span></span>
+    
+        <span class="footer-icon"><mat-icon>mail</mat-icon> <span class="footer-call">sales@ksemin.in</span> </span>
+    </div>
+</div>
+</section> -->
+<!-- <div class="container-fluid page">
+
+    <div class="page__content p-3 position-relative">
+        <div class="page__content-data position-absolute text-center"> -->
+            <!-- <section id="blog">
+
+
+                <div class="blog-container">
+                    <div class="blog-box">
+                        <div class="blog-img">
+                            <img class="orgs-img" src="../../../assets/images/dashboard.png" alt="Reporting Image">
+                        </div>
+
+                        <div class="blog-text">
+                            <span>
+                                25 April 2023 | Manual
+                            </span>
+                            <a (click)="InfoPopup('dashboard')" class="blog-title">
+                                Steps to get Chart on Reporting
+                            </a>
+                            <p>A reporting tab is typically a section of our web application that allows users to
+                                generate and view reports based on their selection. These reports can include a variety
+                                of sensor information.</p>
+                            <a (click)="InfoPopup('dashboard')" class="blog-button">Read More</a>
+                        </div>
+                    </div>
+                    <div class="blog-box">
+                        <div class="blog-img">
+                            <img src="../../../assets/images/orgs.png" alt="Sensor Image">
+                        </div>
+
+                        <div class="blog-text">
+                            <span>
+                                25 April 2023 | Manual
+                            </span>
+                            <a (click)="InfoPopup('table')" class="blog-title">
+                                Steps to get Real Time values in table format on Sensor Tab
+                            </a>
+                            <p>A Sensors tab is typically a section of our web application that allows users to generate
+                                and view table format reports based on their selection. These reports can include a
+                                variety of sensor information.</p>
+                            <a (click)="InfoPopup('table')" class="blog-button">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+
+
+
+
+            <!-- Message Us Section -->
+            <!-- <section> -->
+                <!-- conatact container-->
+                <!-- <div class="contact-container"> -->
+                    <!-- form -->
+                    <!-- <div class="form-container"> -->
+                        <!-- <h3 style="color: #fff">Meassage Us</h3> -->
+                        <!-- <form  class="contact-form"  [formGroup]="updateform" (ngSubmit)="sendmail()"> -->
+                        <!-- <form class="contact-form" [formGroup]="updateform" (ngSubmit)="sendMail()">
+
+                            <input formControlName="name" type="text" id="name" placeholder="Your name" required>
+                            <input formControlName="email" type="email" id="email" name="Your mail"
+                                placeholder="Enter your Email..." required>
+                            <textarea formControlName="message" id="message" cols="30" rows="10"
+                                placeholder="Write message here..." required></textarea>
+                            <input type="submit" value="Send" class="send-button"> -->
+                            <!-- <button type="submit" class="send-button">Send</button> -->
+
+                        <!-- </form> --> 
+                    <!-- </div> -->
+                    <!-- Map -->
+                    <!-- <div class="map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3780.34748825653!2d73.84877971518614!3d18.648396487334665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1679912019470!5m2!1sen!2sin"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div> -->
+                <!-- </div> -->
+                <!-- <br>
+                <br>
+                <br> -->
+                <!-- footer section -->
+            <!-- </section>
+            <section>
+                <footer class="footer-section">
+                    <div>
+                        <div class="footer-cta pt-5 ">
+                            <div class="row">
+                                <div class="col-xl-4 col-md-4 mb-30">
+                                    <div class="single-cta">
+                                        <div class="cta-text">
+
+                                            <h4 class="icon-size">Find us</h4>
+                                            <span>Sai Ganga Apartment,Sant Nager,Sectore No.04,Jai Ganesh Samrajya
+                                                Squre,Moshi Pradhikaran,PCMC,Pune-411070</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-md-4 mb-30">
+                                    <div class="single-cta">
+                                        <mat-icon class="icon-size"> call</mat-icon>
+
+                                        <div class="cta-text">
+                                            <h4>Call us</h4>
+                                            <span>+(91)020-27401273</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-md-4 mb-30">
+                                    <div class="single-cta">
+                                        <mat-icon class="icon-size">email</mat-icon>
+                                        <div class="cta-text">
+                                            <h4>Mail us</h4>
+                                            <span>sales@ksemin.in</span><br>
+                                            <span>support@ksemin.in</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-content pt-5 pb-1">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6 mb-50">
+                                    <div class="footer-widget">
+                                        <div class="footer-logo">
+                                            <a href="index.html"> <img src="../../../assets/images/Logo.png"
+                                                    alt="kSemin Systems.Pvt.Ltd" id="SidenavLogo"></a>
+                                        </div>
+                                        <div class="footer-text">
+                                            <p>kSemin Systems already helped multiple business to transform legacy
+                                                application pool to multiple Cloud, do you want to partner us with your
+                                                digital cloud journey with us,
+                                                please write to sales@ksemin.in now! </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 mb-30">
+                                    <div class="footer-widget">
+                                        <div class="footer-widget-heading">
+                                            <h3>Useful Links</h3>
+                                        </div>
+                                        <ul class="useful-links">
+                                            <li><a href="https://sites.google.com/ksemin.in/ksemin/contact-us?authuser=0"
+                                                    target="_blank">Our Policies</a></li>
+                                            <li><a href="https://sites.google.com/ksemin.in/ksemin/contact-us?authuser=0"
+                                                    target="_blank">Our Team</a></li>
+                                            <li><a href="https://sites.google.com/ksemin.in/ksemin/about-us?authuser=0"
+                                                    target="_blank">About us</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </footer>
+            </section>
+        </div>
+    </div>
+</div>
+<script src="https://smtpjs.com/v3/smtp.js">
+</script> -->

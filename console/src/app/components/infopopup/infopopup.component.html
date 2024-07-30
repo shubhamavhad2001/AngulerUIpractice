@@ -1,0 +1,35 @@
+<mat-card>
+    <mat-card-header>
+        <h1 style="align-items:center">Request Form</h1>
+    </mat-card-header>
+    <mat-card-content>
+        <form class="example-form" [formGroup]="requestForm" >
+        <div>
+            <input type="text" formControlName="name" placeholder="name">
+        </div>
+        <div>
+            <input type="tel" formControlName="phone" placeholder="your phone number">
+        </div>
+        <div>
+            <input type="text" formControlName="email" placeholder="email">
+        </div>
+        <div>
+            <input type="text" formControlName="organisation_name" placeholder="Fill Organization's Name">
+        </div>
+        <div>
+            <input type="text" formControlName="industry" placeholder="which industry your organization belong?">
+        </div>
+        
+        <div class="send-div">
+            <button class="update-button" (click)="sendMail()" mat-menu-item><mat-icon>email</mat-icon> Send</button>
+            <a class="update-button" mat-dialog-close mat-menu-item><mat-icon>exit_to_app</mat-icon> Close</a>
+        </div>
+        
+      </form>
+      
+
+    </mat-card-content>
+  </mat-card>
+  
+
+
